@@ -66,9 +66,9 @@ CREATE DATABASE charlies_detailing;
 ```ts
 host: 'localhost';
 port: 5432;
-username: 'frank_dev';
-password: 'francodosha';
-database: 'charlies_detailing';
+username: 'your_username';
+password: 'your_password';
+database: 'your_database';
 ```
 
 3. Ensure your `TypeOrmModule` has:
