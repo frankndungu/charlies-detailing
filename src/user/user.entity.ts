@@ -7,6 +7,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { Exclude } from 'class-transformer';
 import { Car } from '../car/car.entity';
 import { Booking } from '../booking/booking.entity';
 
@@ -27,6 +28,7 @@ export class User {
   email: string;
 
   @Column()
+  @Exclude() // This will exclude password from JSON responses
   password: string;
 
   @Column({ type: 'enum', enum: UserRole, default: UserRole.CUSTOMER })
